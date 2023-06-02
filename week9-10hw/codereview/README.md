@@ -3,5 +3,6 @@
  - there is a constant variable that check the win count for each players O and X but it does not display in the element. If Sapana can update the win count when the board is render each time it is being reset. 
  - i noticed there wasnt a buttonevent when the game is tie. you should add one .
  - THank you for letting me code review you Sapana!!!
-  
+ - the code review are commented in the javascript file! 
+
 
