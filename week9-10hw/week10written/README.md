@@ -10,7 +10,23 @@
 
 5.Each different HTTP verbs are used to perform different actions on resources.
   - GET method is used to retrieve a collection of resources without modifying it.
+  - POST method is used to submit data to be processed by the server to create a new resource.
+  - PUT method is used to upate and existating resource or create it if it doesnt exist by using a specific URI.
+  - PATCH method is used to partially update an existing resource. It modified a specific attributes or properties of a resources without replacing the entire represation.
+  - DELETE method is used to deletes a specified resource.
     
+6.URL parameters can be handled using route parameters. example : app.get('/books/:id', (req, res) => {
+  const bookId = req.params.id;
+  res.send(`${bookId});
+});
+
+7.you can use build in eroor status or use a try catch block also async and await error handling.
+
+8.You can you the acronym INDUCES structor your routes. The end point should use the appropriate HTTP method verbs for the route or paths.
+
+9.YOu can parse incoming request bodies iby using middleware.  Such as express.json() and express.urlencoded()
+
+10.you can use supertest and jest and creating a test js file that test expected item or message.
 
 
 
