@@ -2,7 +2,15 @@
 
 1.REST API also known as RESTful API is an application programming interface is a style to design network application. It set up a set of rules and constraints that dictate how resources are identified and addressed, and how clients and server communicate with each other. To make an API RESTful they must requests managed throuigh HTTP. 
 
-2.test 
+2.Node.js is a server side env that allows developers to run javascript code outside of a web browser. Due to it flexibility it is widely used for server-side application.
+
+3.Express.js is known for its simplicity and minimalist design. It offer a flexible routing for developers to definite using different HTTP method and URLs. It also provides and support various template engines that helps render dynamic HTML pages.
+
+4.Middleware allow developers to add additional functionality to the request respponse cycle. It can be used for tasks such as, authentication, logging, request parsing, error handling, and more.
+
+5.Each different HTTP verbs are used to perform different actions on resources.
+-GET method is used to retrieve a collection of resources without modifying it. 
+
 
 
 
