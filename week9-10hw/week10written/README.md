@@ -1,7 +1,8 @@
 # week10written hw
 
 1.REST API also known as RESTful API is an application programming interface is a style to design network application. It set up a set of rules and constraints that dictate how resources are identified and addressed, and how clients and server communicate with each other. To make an API RESTful they must requests managed throuigh HTTP. 
-2. test 
+
+2.test 
 
 
 
