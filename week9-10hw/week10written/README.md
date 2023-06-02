@@ -9,7 +9,7 @@
 4.Middleware allow developers to add additional functionality to the request respponse cycle. It can be used for tasks such as, authentication, logging, request parsing, error handling, and more.
 
 5.Each different HTTP verbs are used to perform different actions on resources.
-    - GET method is used to retrieve a collection of resources without modifying it. 
+    -GET method is used to retrieve a collection of resources without modifying it. 
 
 
 
