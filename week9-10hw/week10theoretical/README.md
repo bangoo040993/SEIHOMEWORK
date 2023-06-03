@@ -1,0 +1,9 @@
+#week10theoretical
+1.O(N)
+2.O(N^2)
+3.O(N)
+4.O(1)
+5.O(N)
+6.O(7)
+7.O(n)
+8.O(N)
