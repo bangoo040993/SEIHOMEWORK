@@ -36,8 +36,33 @@ app.get('/tip/:total/:tipPercentage', (req, res) =>{
 return bigBaller(tipDeci);
 })
 
+
+//------------------YOU=JUST=GOT=GOLDEN=RATIOED=BRO!------
+//Tried to use a if statement using the formula for fibonacci to check if the number is a perfect squareroot but it still return even if there are decimal. 
+//time crunch i want to think of a away  to make whole number true and numnber with decimal become false.
+app.get('/Fibonnaci/:num', (req, res) => {
+    const n = parseInt(req.params.num)
+
+    function fibonnaciOrFugazi (n, res) {
+        let a = 0 
+        let b = 1
+
+        while (b <= n) {
+            if (b === n) {
+                res.send('GOLDEN RATION BABYYYYYYYY')
+                return;
+            }
+            const newNum = a
+            a = b
+            b = newNum + b
+        }
+        res.send("MAMA MIA!!! IT'S A FUGAZI")
+    }
+  fibonnaciOrFugazi(n, res)
+})
+
 app.listen(3000, () => {
     console.log('Cortana checking in from port 3000')
 })
 
-console.log(9*0) 
+console.log(5*(2*2)-4) 
