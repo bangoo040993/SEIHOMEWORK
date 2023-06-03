@@ -61,6 +61,41 @@ app.get('/Fibonnaci/:num', (req, res) => {
   fibonnaciOrFugazi(n, res)
 })
 
+//========================MAGIC-8-QUESTION=========================
+
+app.get('/magic/:question', (req, res) => {
+  const magic8BallResponse = [
+    "It is certain",
+    "It is decidedly so",
+    "Without a doubt",
+    "Yes definitely",
+    "You may rely on it",
+    "As I see it yes",
+    "Most likely",
+    "Outlook good",
+    "Yes",
+    "Signs point to yes",
+    "Reply hazy try again",
+    "Ask again later",
+    "Better not tell you now",
+    "Cannot predict now",
+    "Concentrate and ask again",
+    "Don't count on it",
+    "My reply is no",
+    "My sources say no",
+    "Outlook not so good",
+    "Very doubtful",
+    "You ought to ask the magic 9 ball",
+    "Why are you talking to me?",
+    "Is this the real life? or is it a fantasy?"
+  ];
+
+  const random8Response = magic8BallResponse[Math.floor(Math.random() * magic8BallResponse.length)];
+
+  res.send(`<h1 style="text-align: center;">${random8Response}</h1>`);
+});
+
+
 app.listen(3000, () => {
     console.log('Cortana checking in from port 3000')
 })
