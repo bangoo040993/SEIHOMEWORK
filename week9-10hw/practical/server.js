@@ -42,23 +42,27 @@ return bigBaller(tipDeci);
 //time crunch i want to think of a away  to make whole number true and numnber with decimal become false.
 app.get('/Fibonnaci/:num', (req, res) => {
     const n = parseInt(req.params.num)
+    const nPlus = Number.isInteger(Math.sqrt(5 * (n * n) +4))
+    const nMinus = Number.isInteger(Math.sqrt(5 * (n * n) -4))
+    if (nPlus || nMinus ) {
+      res.send('GOLDEN RATION BABYYYYYYYY')
+    } else {res.send("MAMA MIA!!! IT'S A FUGAZI")}
+  //   function fibonnaciOrFugazi (n, res) {
+  //       let a = 0 
+  //       let b = 1
 
-    function fibonnaciOrFugazi (n, res) {
-        let a = 0 
-        let b = 1
-
-        while (b <= n) {
-            if (b === n) {
-                res.send('GOLDEN RATION BABYYYYYYYY')
-                return;
-            }
-            const newNum = a
-            a = b
-            b = newNum + b
-        }
-        res.send("MAMA MIA!!! IT'S A FUGAZI")
-    }
-  fibonnaciOrFugazi(n, res)
+  //       while (b <= n) {
+  //           if (b === n) {
+  //               res.send('GOLDEN RATION BABYYYYYYYY')
+  //               return;
+  //           }
+  //           const newNum = a
+  //           a = b
+  //           b = newNum + b
+  //       }
+  //       res.send("MAMA MIA!!! IT'S A FUGAZI")
+  //   }
+  // fibonnaciOrFugazi(n, res)
 })
 
 //========================MAGIC-8-QUESTION=========================
