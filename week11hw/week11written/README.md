@@ -1,12 +1,12 @@
 #WEEK11 WRITTEN HW
 1. What is Express in Node.js and why is it used? 
-- Express is a framework for Node.js. Express is a flexible way to build web apps to to listen for and responds HTTP request.
+    - Express is a framework for Node.js. Express is a flexible way to build web apps to to listen for and responds HTTP request.
 
 2. How does Mongoose help in using MongoDB with Node.js?
-- Mongosose help node.js by handling data modeling, validation, and querying and much more.
+    - Mongosose help node.js by handling data modeling, validation, and querying and much more.
 
 3. Can you explain the role of Mongoose in managing relationships between data?
-- mongoose reference a document or embed ed it in another document as a sub document.
+    - mongoose reference a document or embed ed it in another document as a sub document.
 4. What is a software design pattern? Give an example.
 5. Can you explain the MVC architecture in detail?
 6. What roles do Model, View, and Controller play in the MVC architecture?
