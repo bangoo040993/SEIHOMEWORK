@@ -3,6 +3,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express();
 const Item = require('./models/item')
+
 const PORT = process.env.PORT || 3000
 
 app.use(express.json())
@@ -21,8 +22,9 @@ let items = [];
 
 //INDEX
 
-app.get('/items', (req, res) => {
+app.get('/items', async (req, res) => {
     try {
+        const items = await Item.find()
         res.json(items);
     } catch (error) {
         res.status(400).send({ message: error.message })
@@ -31,13 +33,69 @@ app.get('/items', (req, res) => {
 })
 
 
+
+
 //NEW
 
+// GET /items/:id: Get an item by id
+app.get('/items/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+  
+      // Find the item by id
+      const item = await Item.findById(id);
+  
+      if (!item) {
+        return res.status(404).json({ message: 'Item not found' });
+      }
+  
+      res.json(item);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  });
+  
 
 //DELETE
 
 
 //UPDATE
+app.put('/items/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const { name, price } = req.body;
+  
+      // Find the item by id and update its name and price
+      const updatedItem = await Item.findByIdAndUpdate(id, { name, price }, { new: true });
+  
+      if (!updatedItem) {
+        return res.status(404).json({ message: 'Item not found' });
+      }
+  
+      res.json(updatedItem);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  });
+  
+  // DELETE /items/:id: Delete an item by id
+  app.delete('/items/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+  
+      // Find the item by id and delete it
+      const deletedItem = await Item.findByIdAndDelete(id);
+  
+      if (!deletedItem) {
+        return res.status(404).json({ message: 'Item not found' });
+      }
+  
+      res.json(deletedItem);
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  });
+ 
 
 
 //CREATE
@@ -49,6 +107,7 @@ app.post('/items', async (req, res) => {
       res.status(400).json({ message: error.message });
     }
   });
+
 //EDIT
 
 
